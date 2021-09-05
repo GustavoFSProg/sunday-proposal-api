@@ -20,7 +20,7 @@ async function getAll(req: Request, res: Response) {
   try {
     const data = await UserModel.find()
 
-    return res.status(201).send({ data })
+    return res.status(201).send(data)
   } catch (error) {
     return res.status(400).send({ msg: 'Deu Error!' })
   }
