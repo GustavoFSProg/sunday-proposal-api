@@ -1,7 +1,7 @@
 {
   "name": "sistem",
   "version": "1.0.0",
-  "main": "index.ts",
+  "main": "src/index.ts",
   "license": "MIT",
   "dependencies": {
     "@types/md5": "^2.3.1",
