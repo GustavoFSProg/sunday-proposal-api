@@ -8,7 +8,7 @@ dotenv.config()
 
 const { PORT, DATABASE } = process.env
 
-mongoose.connect(String(process.env.DATABASE), {
+mongoose.connect(String(DATABASE), {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
