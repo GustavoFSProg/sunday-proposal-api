@@ -36,6 +36,16 @@ async function getByEmail(req: Request, res: Response) {
   }
 }
 
+async function getById(req: Request, res: Response) {
+  try {
+    const data = await UserModel.findById(req.params.id)
+
+    return res.status(201).send(data)
+  } catch (error) {
+    return res.status(400).send({ msg: 'Deu Error!' })
+  }
+}
+
 async function update(req: Request, res: Response) {
   try {
     await UserModel.findByIdAndUpdate(req.params.id, {
@@ -62,4 +72,4 @@ async function deleteOne(req: Request, res: Response) {
   }
 }
 
-export default { update, register, getAll, getByEmail, deleteOne }
+export default { update, getById, register, getAll, getByEmail, deleteOne }
